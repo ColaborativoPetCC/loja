@@ -1,0 +1,34 @@
+Produto(
+	*Codigo,
+	Nome,
+	Preco,
+	CodigoBarra,
+	Qtd_estoque
+)
+Pedido(
+	*Codigo,
+	&Codigo_Cliente,
+	&Codigo_FormaPagamento,
+	Data_venda,
+	Data_vencimento,
+	Status
+)
+Cliente(
+	*Codigo,
+	CPF,
+	Nome,
+	Endereco,
+	Email,
+	Telefone,
+	Login,
+	Senha
+)
+FormaPagamento(
+	Codigo,
+	Descricao
+)
+Produto_Pedido(
+	*Codigo_Produto,
+	*Codigo_Pedido,
+	Qtd
+)
